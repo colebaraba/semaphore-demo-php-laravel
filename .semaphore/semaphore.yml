@@ -84,4 +84,4 @@ blocks:
             - checkout
             - 'docker pull symfonycorp/cli:latest'
             - composer install
-            - 'docker run --rm -v symfonycorp/cli check:security'
+            - 'docker run --rm -v $(pwd):$(pwd) -w $(pwd) symfonycorp/cli check:security'
